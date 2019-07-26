@@ -1,8 +1,8 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    {!! menu('main', 'bootstrap') !!}
 
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="top-left links">
         @if (Route::has('login'))
+            <a class="nav-link" href="/">HOME</a>
     </div>
     <div class="top-right links">
     @auth
@@ -20,7 +20,7 @@
                     @endif
                 @else
                     <li class="nav-item dropdown">
-                        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                        <a id="navbarDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                             {{ Auth::user()->name }} <span class="caret"></span>
                         </a>
 
@@ -45,4 +45,7 @@
         @endauth
     </div>
     @endif
+</nav>
+<nav  class="navbar navbar-default" role="navigation">
+    {!! menu('main','bootstrap') !!}
 </nav>
