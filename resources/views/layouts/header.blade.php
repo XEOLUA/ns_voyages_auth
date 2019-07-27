@@ -46,7 +46,7 @@
         .top-right {
             position: absolute;
             right: 10px;
-            top: 18px;
+            top: 0px;
         }
 
         .content {
@@ -67,8 +67,9 @@
             text-transform: uppercase;
         }
         .m-b-md {
-            margin-bottom: 30px;
+            margin-bottom: 0px;
         }
     </style>
 </head>
 <body>
+

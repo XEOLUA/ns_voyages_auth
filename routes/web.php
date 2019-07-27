@@ -26,4 +26,5 @@ Auth::routes();
 
 Route::get('/page/{slug}', 'PagesController@showPage');
 Route::get('/', 'PagesController@showMainPage');
+Route::get('/posts', 'PostController@showPosts');
 //Route::get('/', 'MyMenuController@showTree');

@@ -1,6 +1,8 @@
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="top-left links">
+<nav class="navbar navbar-expand-lg navbar-light bg-light" style=" height:200px;
+background-image: url('https://cdn.freelance.ru/img/portfolio/pics/00/21/CA/2214477.jpg?mt=ee96da18'); background-size: contain;
+">
+    <div class="top-left links" >
         @if (Route::has('login'))
             <a class="nav-link" href="/">HOME</a>
     </div>
@@ -46,6 +48,6 @@
     </div>
     @endif
 </nav>
-<nav  class="navbar navbar-default" role="navigation">
+<nav  class="navbar navbar-default" role="navigation" style="margin-top:-70px;">
     {!! menu('main','bootstrap') !!}
 </nav>

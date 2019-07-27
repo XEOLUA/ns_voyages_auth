@@ -5,7 +5,7 @@
 {{--end header site--}}
 
 {{--body site--}}
-<div id="app" style="border:1px solid red; padding:10px">
+<div id="app" style="border:0px solid red; padding:0px">
     @section('menu')
         @include('layouts.menu')
     @show
