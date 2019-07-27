@@ -2,8 +2,7 @@
 @section('content')
     @isset($posts)
         @foreach($posts as $post)
-            <h1>{!! $post->title !!}</h1>
-            <h4>{!! $post->created_at !!}</h4>
+             @include('layouts.onepost',['post'=>$post])
         @endforeach
     @endisset
 @endsection

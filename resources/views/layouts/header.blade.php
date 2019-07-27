@@ -20,6 +20,41 @@
 
     <!-- Styles -->
     <style>
+        .postHeader{
+            display:flex;
+            justify-content: space-between;
+            padding:5px;
+            background-color: #6c757d;
+            color: beige;
+            font-weight:bold;
+        }
+
+        .postConteiner{
+            width:90%;
+            margin:auto;
+            border:1px solid silver;
+            margin-bottom: 30px;
+            overflow:auto;
+        }
+
+        .postBody{
+            padding:5px;
+            text-align: justify;
+            overflow:auto;
+        }
+
+        .postImage{
+            width:100px;
+            margin: 10px;
+        }
+
+        .postAdminBar{
+            float: right;
+            border-top: 1px solid silver;
+            border-left: 1px solid silver;
+            padding: 3px;
+        }
+
         html, body {
             background-color: #fff;
             color: #636b6f;
