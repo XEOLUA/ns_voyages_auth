@@ -9,14 +9,12 @@
      </div>
      <div class="postBody">
          <img class="postImage" src="storage/{{$post->image}}" align="left">
-         {!! $post->body !!}
+         {!! $post->excerpt  !!}
      </div>
-
-     @if(Auth::check())
+     @if(Auth::check()&&($role==1||$role==3))
          <div class="postAdminBar">
          <a target=_blank href=admin/posts/{{$post->id}}/edit>Редагувати</a> |
-         <a href=''/delete>Видалити</a>
-
+         <a href=postdel/{{$post->id}}>Видалити</a>
          </div>
      @endif
  </section>

@@ -3,7 +3,6 @@
     @include('layouts.header')
 @show
 {{--end header site--}}
-
 {{--body site--}}
 <div id="app" style="border:0px solid red; padding:0px">
     @section('menu')
@@ -13,7 +12,7 @@
     <main class="py-4">
         @yield('content')
     </main>
-</div>
+
 {{--end body site--}}
 
 {{--footer site--}}
@@ -21,3 +20,4 @@
     @include('layouts.footer')
 @show
 {{--end footer site--}}
+</div>

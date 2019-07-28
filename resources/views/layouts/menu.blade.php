@@ -48,6 +48,6 @@ background-image: url('https://cdn.freelance.ru/img/portfolio/pics/00/21/CA/2214
     </div>
     @endif
 </nav>
-<nav  class="navbar navbar-default" role="navigation" style="margin-top:-70px;">
+<nav  class="navbar navbar-default" role="navigation" style="margin-top:-70px; margin-bottom:0;">
     {!! menu('main','bootstrap') !!}
 </nav>

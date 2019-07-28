@@ -1,5 +1,5 @@
-<div>
-    2019
+<div class="footer">
+   NewSite - 2019
 </div>
 </body>
 </html>

@@ -60,7 +60,7 @@
             color: #636b6f;
             font-family: 'Nunito', sans-serif;
             font-weight: 200;
-            height: 100vh;
+            height: 100%;
             margin: 0;
         }
 
@@ -91,7 +91,9 @@
         .title {
             font-size: 84px;
         }
-
+        .footer{
+            flex: 0 0 auto;
+        }
         .links > a {
             color: #636b6f;
             padding: 0 25px;
@@ -103,6 +105,24 @@
         }
         .m-b-md {
             margin-bottom: 0px;
+        }
+        .py-4{
+            padding:10px;
+            flex: 1 0 auto;
+        }
+
+        #app{
+            display: flex;
+            flex-direction: column;
+            min-height: 100%;
+        }
+
+        .footer{
+            flex: 0 0 auto;
+            text-align: center;
+            background-color: #1b1e21;
+            color: snow;
+            padding: 10px;
         }
     </style>
 </head>
