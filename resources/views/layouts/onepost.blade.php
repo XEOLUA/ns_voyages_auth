@@ -8,7 +8,9 @@
     </div>
      </div>
      <div class="postBody">
+        @if($post->image!=null)
          <img class="postImage" src="storage/{{$post->image}}" align="left">
+         @endif
          {!! $post->excerpt  !!}
      </div>
      @if(Auth::check()&&($role==1||$role==3))

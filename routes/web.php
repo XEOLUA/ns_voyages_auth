@@ -28,5 +28,6 @@ Route::get('/page/{slug}', 'PagesController@showPage');
 Route::get('/', 'PagesController@showMainPage');
 Route::get('/posts', 'PostController@showPosts');
 Route::get('/postdel/{postId}', 'PostController@deletePost');
-Route::get('/postadd', 'PostController@addPost');
+Route::get('/postadd', 'PostController@showForm');
+Route::post('/postadd', 'PostController@addPost')->name('addPost');
 //Route::get('/', 'MyMenuController@showTree');

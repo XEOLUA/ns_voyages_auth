@@ -34,14 +34,34 @@ class PostController extends Controller
         }
     }
 
-    public function addPost(){
+    public function showForm(){
         $this->role_id=0;
         if(Auth::check())
         {
             $this->role_id=User::select('role_id')->where('id',Auth::id())->first()->role_id;
-            if($this->role_id==1||$this->role_id==3) return view('addPost',['role_id'=>$this->role_id]);
-            else return "Access denied!";
-        }
+            if($this->role_id==1||$this->role_id==3) return view('layouts.postadd',['role_id'=>$this->role_id]);
+            else return "Access denied! Return to <a href='\'>Home</a>";
+        }else return "Access denied! Return to <a href='\'>Home</a>";
+    }
+
+    public function addPost(Request $request){
+        $this->validate($request, [
+            'title'=>'required|max:100',
+            'body'=>'required',
+            'excerpt'=>'required',
+            'slug'=>'required|unique:posts'
+        ]);
+
+        $data=$request->all();
+        $post=new Post;
+        $post->fill($data);
+//        dump($post);
+        $post->author_id=Auth::id();
+        $post->seo_title='st';
+        $post->status='PUBLISHED';
+        $post->save();
+
+        return redirect('/posts');
     }
 
 }
