@@ -59,8 +59,33 @@ class PostController extends Controller
         $post->author_id=Auth::id();
         $post->seo_title='st';
         $post->status='PUBLISHED';
-        $post->save();
 
+        $img='';
+        //dd($_FILES['image']);
+        if ($post->image!=null) $img=$_FILES['image']['name'];
+//dd($img);
+        // якщо вдалося скопіювати отриманий файл до сервера
+        if ($post->image!=null)
+            if( copy($_FILES['image']['tmp_name'], 'storage/posts/'.$img))
+                //copy($post->image, 'storage/posts/'.$img))
+            {
+                echo("Файл успішно завантажено <br>");
+                echo('<br>Ім`я файлу: ');
+                echo($img);
+                echo('<br>Розмір файлу: ');
+                echo($_FILES['image']['size']);
+                echo('<br>Тип файлу: ');
+                echo($_FILES['image']['type']);
+                $post->image="posts/".$img;
+                //img_min($img,"min".$img,150,150);
+            }
+            else
+            {
+                echo("Помилка завантаження файлу");
+                echo $img;
+            }
+
+        $post->save();
         return redirect('/posts');
     }
 
