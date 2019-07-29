@@ -67,7 +67,6 @@ class PostController extends Controller
         // якщо вдалося скопіювати отриманий файл до сервера
         if ($post->image!=null)
             if( copy($_FILES['image']['tmp_name'], 'storage/posts/'.$img))
-                //copy($post->image, 'storage/posts/'.$img))
             {
                 echo("Файл успішно завантажено <br>");
                 echo('<br>Ім`я файлу: ');
